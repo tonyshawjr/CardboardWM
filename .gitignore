@@ -1,0 +1,16 @@
+# General
+.DS_Store
+
+# Environments
+.env
+
+# Composer
+/composer.phar
+/vendor/
+/composer.lock
+
+# Ignore Mac system files
+*.DS_Store
+
+# Ignore node modules
+/node_modules/
