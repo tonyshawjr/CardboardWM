@@ -1,53 +1,24 @@
 <?php include_once 'header.php'; ?>
-
-<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-md w-full space-y-8">
-    <div>
-      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-        Sign in to your account
-      </h2>
+<div class="flex items-center justify-center h-screen bg-gray-200">
+    <div class="bg-white p-16 rounded shadow-2xl w-2/3">
+        <h2 class="text-3xl font-bold mb-10 text-gray-800">Sign in to your account</h2>
+        <form class="space-y-5" action="#" method="POST">
+            <div>
+                <label class="block mb-1 font-bold text-gray-500">Email address</label>
+                <input type="email" name="email" id="email-address" autocomplete="email" required class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500" placeholder="Email address">
+            </div>
+            <div>
+                <label class="block mb-1 font-bold text-gray-500">Password</label>
+                <input type="password" name="password" id="password" autocomplete="current-password" required class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500" placeholder="Password">
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="remember-me" name="remember-me" class="mr-2">
+                <label for="remember-me" class="text-sm text-gray-800">Remember me</label>
+            </div>
+            <button type="submit" class="block w-full bg-purple-500 hover:bg-purple-400 p-4 rounded text-white font-bold">Sign in</button>
+        </form>
+        <a href="#" class="text-purple-500 hover:text-purple-600 text-sm">Forgot your password?</a>
+        <a href="#" class="block text-center text-purple-500 hover:text-purple-600 text-sm mt-4">Don't have an account? Register Now</a>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
-      <input type="hidden" name="remember" value="true">
-      <div class="rounded-md shadow-sm -space-y-px">
-        <div>
-          <label for="email-address" class="sr-only">Email address</label>
-          <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
-        </div>
-        <div>
-          <label for="password" class="sr-only">Password</label>
-          <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between">
-        <div class="flex items-center">
-          <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-          <label for="remember-me" class="ml-2 block text-sm text-gray-900">
-            Remember me
-          </label>
-        </div>
-
-        <div class="text-sm">
-          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-            Forgot your password?
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          Sign in
-        </button>
-      </div>
-
-      <div class="text-sm text-center">
-        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-          Don't have an account? Register Now
-        </a>
-      </div>
-    </form>
-  </div>
 </div>
-
 <?php include_once 'footer.php'; ?>

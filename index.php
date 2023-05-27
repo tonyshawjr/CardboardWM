@@ -1,21 +1,29 @@
 <?php
-// Define the path to the MVC directories
-define("VIEW_PATH", __DIR__ . "/src/view/");
-define("CONTROLLER_PATH", __DIR__ . "/src/controller/");
-define("MODEL_PATH", __DIR__ . "/src/model/");
+// Autoload classes
+require_once __DIR__ . '/vendor/autoload.php';
 
-// Include the MVC files
-include_once MODEL_PATH . 'indexModel.php';
-include_once VIEW_PATH . 'indexView.php';
-include_once CONTROLLER_PATH . 'indexController.php';
+// Start a new session or resume an existing one
+session_start();
 
+// Use request_uri to capture the path requested by user
 $request = $_SERVER['REQUEST_URI'];
 
+// Use switch case to require the correct view based on the request
 switch ($request) {
-    case '/login' :
+    case '/':
+        require __DIR__ . '/src/view/indexView.php';
+        break;
+
+    case '/login':
         require __DIR__ . '/src/view/loginView.php';
         break;
+
+    case '/register':
+        require __DIR__ . '/src/view/registerView.php';
+        break;
+
     default:
+        http_response_code(404);
         require __DIR__ . '/src/view/404.php';
         break;
 }

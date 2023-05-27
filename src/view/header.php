@@ -9,4 +9,3 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/public/css/custom.css">
 </head>
-<body>
